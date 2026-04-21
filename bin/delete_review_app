@@ -13,6 +13,8 @@ REVIEW_APP_NAME="review-app-${UNIQUE_SUFFIX}"
 
 echo "Deleting $REVIEW_APP_NAME for branch $BRANCH_NAME..."
 
+# Force deletion is in place to skip the deletion confirmation. The --force flag still respects the deletion protection
+# mechanism. You could limit the risk by enabling deletion protection for your production environments.
 nctl delete app "$REVIEW_APP_NAME" -p "$DEPLOIO_PROJECT" --force --wait || true
 nctl delete postgresdatabase "$REVIEW_APP_NAME" -p "$DEPLOIO_PROJECT" --force --wait || true
 
