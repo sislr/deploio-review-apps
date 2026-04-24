@@ -73,3 +73,9 @@ bin/deploy_review_app feature/my-branch
 # Cleanup
 bin/delete_review_app feature/my-branch
 ```
+
+## Further ideas
+
+- Job to cleanup old review apps (daily?)
+- Seed database with data from develop
+- Shikigamiya integration?
